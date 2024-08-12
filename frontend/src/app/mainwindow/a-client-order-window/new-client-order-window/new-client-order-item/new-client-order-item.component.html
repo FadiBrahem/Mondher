@@ -1,0 +1,67 @@
+<div style="overflow-y:auto ;overflow-x: hidden;height: 610px;">
+<table class="table is-full menu-list"  >
+  <tbody>
+      <tr *ngFor="let CliOrder of CliOrders ">
+        <div class="div columns  is-full btn r" style="width: 200%;" >
+            <div class="div column" >
+              <table class="table is-full" style="width: 55%;">
+                <thead style="font-weight: bold;">
+                  <td>Client Name</td>
+                  <td>Client Contact </td>
+                  <td >ClientID </td>
+                  <td >Client Email </td>
+                  <td >Product Names </td>
+                  <td>Product Prices</td>
+                  <td>Quantities</td>
+                  <td >Total</td>
+                  <td >Pickup Date</td>
+                  <td class="level-right"><a class="button is-small is-primary" (click)="onOderVerify(CliOrder.doctorName,CliOrder.doctorEmail,CliOrder.totalAmount,CliOrder.pickupDate,CliOrder.drugId,CliOrder.drugName,CliOrder.drugPrice,CliOrder.drugQuantity,CliOrder.realQuantity,CliOrder.doctorId,CliOrder.doctorContact,CliOrder.id)" >Order Verify</a></td>
+                </thead>
+                <tbody>
+                  <td>{{CliOrder.doctorName}}</td>
+                  <td>{{CliOrder.doctorContact}} </td>
+                  <td >{{CliOrder.doctorId}} </td>
+                  <td >{{CliOrder.doctorEmail}}</td>
+                  <td >{{CliOrder.drugName[0]}}<br>{{CliOrder.drugName[1]}}<br>{{CliOrder.drugName[2]}}<br>{{CliOrder.drugName[3]}}<br>{{CliOrder.drugName[4]}}<br>{{CliOrder.drugName[5]}}</td>
+                  <td>{{CliOrder.drugPrice[0]}}<br>{{CliOrder.drugPrice[1]}}<br>{{CliOrder.drugPrice[2]}}<br>{{CliOrder.drugPrice[3]}}<br>{{CliOrder.drugPrice[4]}}<br>{{CliOrder.drugPrice[5]}}</td>
+                  <td>{{CliOrder.drugQuantity[0]}}<br>{{CliOrder.drugQuantity[1]}}<br>{{CliOrder.drugQuantity[2]}}<br>{{CliOrder.drugQuantity[3]}}<br>{{CliOrder.drugQuantity[4]}}<br>{{CliOrder.drugQuantity[5]}}  </td>
+                  <td >{{CliOrder.totalAmount}} </td>
+                  <td >{{CliOrder.pickupDate}} </td>
+
+                  <td class="level-right"><a class="button is-small is-primary" style="font-weight: bold;" href="#">View Order</a></td>
+
+                </tbody>
+              </table>
+            </div>
+        </div><br>
+      </tr>
+<br>
+
+
+
+  </tbody>
+</table>
+</div>
+
+
+
+<style>
+
+  .menu-list{
+    border-radius: 2px;
+    width: 220%;
+    display: block;
+    padding: 10px;
+    }
+    .btn{
+      width: 100%;
+      color:hsl(0, 0%, 21%);
+      background-color: hsl(0, 0%, 88%);
+      border-radius: 3px;
+    }
+    .newclass :hover{
+      background-color: hsl(0, 0%, 21%);
+      color: hsl(0, 0%, 88%);
+    }
+
+</style>

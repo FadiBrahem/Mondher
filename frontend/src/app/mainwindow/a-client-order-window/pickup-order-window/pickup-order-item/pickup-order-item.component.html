@@ -1,0 +1,65 @@
+<div style="overflow-y:auto ;overflow-x: hidden;height: 500px;">
+  <table class="table is-full menu-list"  >
+    <tbody>
+      <div class="" *ngFor="let cliOrder of cliPickedUpOrders ">
+        <tr >
+          <div class="div columns  is-full btn r" style="width: 200%;" >
+              <div class="div column" >
+                <table class="table is-full" style="width: 50.5%;">
+                  <thead style="font-weight: bold;">
+                    <td>Client Name</td>
+                    <td>Client Contact </td>
+                    <td >ClientID </td>
+                    <td >Client Email </td>
+                    <td >Product Names </td>
+                    <td>Product Prices</td>
+                    <td>Quantities</td>
+                    <td >Total</td>
+                    <td >Pickup Date</td>
+                    <td >Actual date</td>
+                  </thead>
+                  <tbody>
+                    <td>{{cliOrder.doctorName}}</td>
+                    <td>{{cliOrder.doctorContact}} </td>
+                    <td >{{cliOrder.doctorId}} </td>
+                    <td >{{cliOrder.doctorEmail}}</td>
+                    <td >{{cliOrder.productName[0]}}<br>{{cliOrder.productName[1]}}<br>{{cliOrder.productName[2]}}<br>{{cliOrder.productName[3]}}<br>{{cliOrder.productName[4]}}<br>{{cliOrder.productName[5]}}</td>
+                    <td>{{cliOrder.productPrice[0]}}<br>{{cliOrder.productPrice[1]}}<br>{{cliOrder.productPrice[2]}}<br>{{cliOrder.productPrice[3]}}<br>{{cliOrder.productPrice[4]}}<br>{{cliOrder.productPrice[5]}}</td>
+                    <td>{{cliOrder.productQuantity[0]}}<br>{{cliOrder.productQuantity[1]}}<br>{{cliOrder.productQuantity[2]}}<br>{{cliOrder.productQuantity[3]}}<br>{{cliOrder.productQuantity[4]}}<br>{{cliOrder.productQuantity[5]}}  </td>
+                    <td >{{cliOrder.totalAmount}} </td>
+                    <td >{{cliOrder.pickupDate}} </td>
+                    <td >{{cliOrder.acctualDate}} </td>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </tr>
+        <br>
+      </div>
+  <br>
+
+
+
+    </tbody>
+  </table>
+  </div>
+  <style>
+
+    .menu-list{
+      border-radius: 2px;
+      width: 220%;
+      display: block;
+      padding: 10px;
+      }
+      .btn{
+        width: 100%;
+        color:hsl(0, 0%, 21%);
+        background-color: hsl(0, 0%, 88%);
+        border-radius: 3px;
+      }
+      .newclass :hover{
+        background-color: hsl(0, 0%, 21%);
+        color: hsl(0, 0%, 88%);
+      }
+
+  </style>
